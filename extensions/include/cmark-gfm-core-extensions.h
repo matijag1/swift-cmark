@@ -9,7 +9,7 @@ extern "C" {
 #include "export.h"
 
 #include <stdbool.h>
-#include <stdint.h>
+#include <cstdint>
 
 CMARK_GFM_EXPORT
 void cmark_gfm_core_extensions_ensure_registered(void);
