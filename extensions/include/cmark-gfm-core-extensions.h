@@ -9,26 +9,26 @@ extern "C" {
 #include "export.h"
 
 #include <stdbool.h>
-#include <cstdint>
+#include <cstdint>  // Changed from <stdint.h> to <cstdint>
 
 CMARK_GFM_EXPORT
 void cmark_gfm_core_extensions_ensure_registered(void);
 
 CMARK_GFM_EXPORT
-uint16_t cmark_gfm_extensions_get_table_columns(cmark_node *node);
+std::uint16_t cmark_gfm_extensions_get_table_columns(cmark_node *node);
 
 /** Sets the number of columns for the table, returning 1 on success and 0 on error.
  */
 CMARK_GFM_EXPORT
-int cmark_gfm_extensions_set_table_columns(cmark_node *node, uint16_t n_columns);
+int cmark_gfm_extensions_set_table_columns(cmark_node *node, std::uint16_t n_columns);
 
 CMARK_GFM_EXPORT
-uint8_t *cmark_gfm_extensions_get_table_alignments(cmark_node *node);
+std::uint8_t *cmark_gfm_extensions_get_table_alignments(cmark_node *node);
 
 /** Sets the alignments for the table, returning 1 on success and 0 on error.
  */
 CMARK_GFM_EXPORT
-int cmark_gfm_extensions_set_table_alignments(cmark_node *node, uint16_t ncols, uint8_t *alignments);
+int cmark_gfm_extensions_set_table_alignments(cmark_node *node, std::uint16_t ncols, std::uint8_t *alignments);
 
 CMARK_GFM_EXPORT
 int cmark_gfm_extensions_get_table_row_is_header(cmark_node *node);
